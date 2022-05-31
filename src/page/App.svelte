@@ -1,3 +1,4 @@
+<!-- <svelte:options tag="my-app" immutable={true} /> -->
 <script lang="ts">
 	export let name: string;
 </script>

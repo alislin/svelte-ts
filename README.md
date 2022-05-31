@@ -70,3 +70,26 @@ If you're building a single-page app (SPA) with multiple routes, sirv needs to b
 "start": "sirv public --single"
 ```
 
+## Web Component
+
+`App.svelte` 
+```diff
++<svelte:options tag="my-component" immutable={true} />
+```
+
+`rollup.config.js`
+```diff
+		svelte({
+			preprocess: sveltePreprocess({
+				sourceMap: !production,
+				postcss: {
+					plugins: [require('autoprefixer')()]
+				}
+			}),
+			compilerOptions: {
+				// enable run-time checks when not in production
+				dev: !production,
++				customElement: true
+			},
+		}),
+```
