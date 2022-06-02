@@ -1,7 +1,7 @@
 import App from './page/App.svelte';
 
 const app = new App({
-	target: document.body,
+	target: document.querySelector("#app"),
 	props: {
 		name: 'world'
 	}

@@ -1,10 +1,3 @@
-<!--
- * @Author: Lin Ya
- * @Date: 2022-05-31 08:33:09
- * @LastEditors: Lin Ya
- * @LastEditTime: 2022-05-31 08:48:13
- * @Description: update readme
--->
 > clone from sveltejs/template include typescript scss
 
 # Inside the package
