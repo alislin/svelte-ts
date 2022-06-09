@@ -13,8 +13,14 @@ This is a project template for [Svelte](https://svelte.dev) apps. It lives at ht
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
-```bash
+```shell
 npx degit alislin/svelte-ts svelte-app
+cd svelte-app
+```
+
+For include mock server
+```shell
+npx degit alislin/svelte-ts#mock svelte-app
 cd svelte-app
 ```
 
