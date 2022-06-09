@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "dev": "rollup -c -w | npm run mock",
     "start": "sirv public --no-clear",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "mock": "json-server ./mock/file-json.js --c ./mock/json-server.json"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",

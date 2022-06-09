@@ -1,0 +1,6 @@
+{
+    "/user/list": "/users",
+    "/user/list/*": "/users/$1",
+    "/user/:id": "/users?id=:id",
+    "/user/:id/:year": "/users/:id?year=:year"
+}

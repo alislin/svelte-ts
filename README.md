@@ -86,3 +86,34 @@ If you're building a single-page app (SPA) with multiple routes, sirv needs to b
 			},
 		}),
 ```
+
+## Mock for development
+
+install `json-server`
+
+```shell
+npm install -g json-server
+```
+Use mock data from `mock/db` . 
+Each API interface is a separate json file with the file name as the endpoint name. All files under the `mock/db` path are automatically loaded. Additional routes can modify `mock/routes.json`
+
+`json-server` is enabled by default and is disabled with the following modifications. `package.json`
+
+```diff
+  "scripts": {
+    "build": "rollup -c",
++   "dev": "rollup -c -w ",
+-   "dev": "rollup -c -w | npm run mock",
+    "start": "sirv public --no-clear",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+-   "mock": "json-server ./mock/file-json.js --c ./mock/json-server.json"
+  },
+```
+
+Modify the listening port `json-server.json`
+```json
+{
+    "port": 53000,
+    "routes": "./mock/routes.json"
+}
+```
