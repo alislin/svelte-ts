@@ -51,7 +51,7 @@ module.exports = () => {
     return localJsonDb;
 }
 ```
-修改 faker 对象 `fake/fakedata.js` `fake/mock.js`
+修改 faker 对象 `mock/fake/fakedata.js` `mock/fake/mock.js`
 
 
 Mock for development
@@ -100,4 +100,4 @@ module.exports = () => {
     return localJsonDb;
 }
 ```
-Modify the faker object `fake/fakedata.js` `fake/mock.js`
+Modify the faker object `mock/fake/fakedata.js` `mock/fake/mock.js`
