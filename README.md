@@ -18,6 +18,12 @@ npx degit alislin/svelte-ts#mock svelte-app
 cd svelte-app
 ```
 
+For include mock server
+```shell
+npx degit alislin/svelte-ts#mock svelte-app
+cd svelte-app
+```
+
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
 
