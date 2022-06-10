@@ -2,7 +2,7 @@
  * @Author: Lin Ya
  * @Date: 2022-06-09 15:54:44
  * @LastEditors: Lin Ya
- * @LastEditTime: 2022-06-09 15:56:29
+ * @LastEditTime: 2022-06-10 11:13:34
  * @Description: file content
 -->
 ## 初始化和启动
@@ -100,4 +100,4 @@ module.exports = () => {
     return localJsonDb;
 }
 ```
-Modify the faker object 'fake/fakedata.js' 'fake/mock.js'
+Modify the faker object `fake/fakedata.js` `fake/mock.js`

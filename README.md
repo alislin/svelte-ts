@@ -139,4 +139,4 @@ module.exports = () => {
     return localJsonDb;
 }
 ```
-Modify the faker object 'fake/fakedata.js' 'fake/mock.js'
+Modify the faker object `fake/fakedata.js` `fake/mock.js`
