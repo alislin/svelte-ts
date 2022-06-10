@@ -53,6 +53,9 @@ module.exports = () => {
 ```
 修改 faker 对象 `mock/fake/fakedata.js` `mock/fake/mock.js`
 
+## 中间件
+`request.js`
+
 
 Mock for development
 

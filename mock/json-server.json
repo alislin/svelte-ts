@@ -1,4 +1,5 @@
 {
     "port": 53000,
-    "routes": "./mock/routes.json"
+    "routes": "./mock/routes.json",
+    "middlewares": "./mock/request.js"
 }
