@@ -3,12 +3,18 @@ const fs = require('fs');
 const path = require('path');
 module.exports = () => {
     let localJsonDb = loadJsonDb();
+
+    // add or update fake data
+    // const fakeoriginalData = require('./fake/mock.js');  //import datas created in fakedata.js
+    // Object.keys(fakeoriginalData).map(item => {
+    //     localJsonDb[item] = fakeoriginalData[item];
+    // });
+
     return localJsonDb;
 }
 
 function loadJsonDb() {
     // Get mock data
-    // const fakeoriginalData = require('./fake/mock.js');  //import datas created in fakedata.js
     const filePath = path.resolve(mockFolder);
     return fileDisplay(filePath);
 }
@@ -35,10 +41,6 @@ function fileDisplay(filePath) {
             fileDisplay(filedir);
         }
     })
-    // setTimeout(() => {
-    //     runServer(localJsonDb);
-    // }, 100)
-
     return data;
 }
 

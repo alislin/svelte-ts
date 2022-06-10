@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-06-09 15:56:29
  * @Description: file content
 -->
-初始化和启动
+## 初始化和启动
 ```shell
 # 初始化，安装
 npm install -g json-server
@@ -35,6 +35,24 @@ json-server file-json.js -c json-server.json
     "routes": "./mock/routes.json"
 }
 ```
+
+## 增加 fake 数据生成
+模板已经初始化 faker 环境，默认没有启用。修改 `file-json.js` 可以启用 faker
+```diff
+module.exports = () => {
+    let localJsonDb = loadJsonDb();
+
+    // add or update fake data
++   const fakeoriginalData = require('./fake/mock.js');  //import datas created in fakedata.js
++   Object.keys(fakeoriginalData).map(item => {
++       localJsonDb[item] = fakeoriginalData[item];
++   });
+
+    return localJsonDb;
+}
+```
+修改 faker 对象 `fake/fakedata.js` `fake/mock.js`
+
 
 Mock for development
 
@@ -66,3 +84,20 @@ Modify the listening port `json-server.json`
     "routes": "./mock/routes.json"
 }
 ```
+
+## Added fake data generation
+The template has initialized the faker environment and is not enabled by default. Modify 'file-json.js' to enable faker
+```diff
+module.exports = () => {
+    let localJsonDb = loadJsonDb();
+
+    // add or update fake data
++   const fakeoriginalData = require('./fake/mock.js');  //import datas created in fakedata.js
++   Object.keys(fakeoriginalData).map(item => {
++       localJsonDb[item] = fakeoriginalData[item];
++   });
+
+    return localJsonDb;
+}
+```
+Modify the faker object 'fake/fakedata.js' 'fake/mock.js'

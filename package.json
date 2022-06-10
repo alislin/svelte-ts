@@ -10,11 +10,13 @@
     "mock": "json-server ./mock/file-json.js --c ./mock/json-server.json"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.2.0",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
     "@tsconfig/svelte": "^2.0.0",
     "autoprefixer": "^10.4.7",
+    "lodash": "^4.17.21",
     "postcss": "^8.4.14",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",

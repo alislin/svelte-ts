@@ -123,3 +123,20 @@ Modify the listening port `json-server.json`
     "routes": "./mock/routes.json"
 }
 ```
+
+## Added fake data generation
+The template has initialized the faker environment and is not enabled by default. Modify 'file-json.js' to enable faker
+```diff
+module.exports = () => {
+    let localJsonDb = loadJsonDb();
+
+    // add or update fake data
++   const fakeoriginalData = require('./fake/mock.js');  //import datas created in fakedata.js
++   Object.keys(fakeoriginalData).map(item => {
++       localJsonDb[item] = fakeoriginalData[item];
++   });
+
+    return localJsonDb;
+}
+```
+Modify the faker object 'fake/fakedata.js' 'fake/mock.js'
